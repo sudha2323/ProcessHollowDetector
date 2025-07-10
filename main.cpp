@@ -56,7 +56,7 @@ void ScanProcesses() {
         if (hProcess) {
             bool isClean = CompareMemoryWithDisk(hProcess, procPath);
             std::wcout << L"[+] PID: " << pe32.th32ProcessID << L" | " << procName
-                       << (isClean ? L" - OK" : L" - ⚠️ Possible Hollowing!") << std::endl;
+                       << (isClean ? L" - OK" : L" -  Possible Hollowing!") << std::endl;
             CloseHandle(hProcess);
         }
 
